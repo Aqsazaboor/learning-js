@@ -307,3 +307,261 @@ function trueOrFalse(wasThatTrue) {
 }
 trueOrFalse(false);
 console.log(trueOrFalse(true));
+
+// equality operators
+
+function equalTest(num) {
+  if (num == 44) {
+    return "Equal";
+  }
+  return "not equal";
+}
+console.log(equalTest(33));
+
+//comparison with the strict equality operator
+//equal operators
+function comperEqual(a, b) {
+  if (a === b) {
+    return "Equal";
+  }
+  return "not equal";
+}
+console.log(comperEqual(10, "10"));
+console.log(comperEqual(10, 10));
+
+function testEqual(val) {
+  if (val != 66) {
+    return "not Equal";
+  }
+  return "equal";
+}
+console.log(testEqual(10));
+
+// strict inequality operator
+function testStrictNotEqual(val) {
+  if (val != 33) {
+    return "not equal";
+  }
+  return "equal";
+}
+console.log(testStrictNotEqual(34));
+//comparisons with the logical and operator
+function testGreater(val) {
+  if (val > 100) {
+    return "over 100";
+  }
+
+  if (val > 10) {
+    return "over 10";
+  }
+  return "10 or under";
+}
+console.log(testGreater(44));
+
+//and / or operator
+function testLogicalAnd(val) {
+  if (val <= 50 && val >= 25) {
+    return "yes";
+  }
+  return "no";
+}
+console.log(testLogicalAnd(10));
+
+// if else statment
+function testElseIf(val) {
+  if (val > 10) {
+    return "greater then 10";
+  } else if (val < 5) {
+    return "smaller then 5";
+  } else {
+    return "between 5 and 10";
+  }
+}
+console.log(testElseIf(6));
+console.log(testElseIf(99));
+
+//case  in switch
+function caseInSwitch(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "beta";
+      break;
+    case 4:
+      answer = "beta";
+      break;
+  }
+  return answer;
+}
+console.log(caseInSwitch(4));
+
+function seqentialSizes(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "high ";
+      break;
+  }
+
+  return answer;
+}
+console.log(seqentialSizes(1));
+
+//replacing is else chains with switch
+//returning boolen value from function
+function isLess(a, b) {
+  return a < b;
+}
+console.log(isLess(20, 15));
+
+//return early pattern for function
+function abTest(a, b) {
+  if (a < 0 || b < 0)
+    return Math.random(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+console.log(abTest(2, 2));
+
+//
+//counting card
+//The Difference Between Arrays and Objects
+//In JavaScript, arrays use numbered indexes. In JavaScript, objects use named indexes. Arrays are a special kind of objects, with numbered indexes.
+
+//build object
+
+var dog = {
+  name: "ladu",
+  age: 9,
+  "legs ": "4",
+  friends: ["heri", "tom"],
+};
+
+console.log(dog);
+
+// dots notations
+var testObj = {
+  hat: "ballcap",
+  shirt: "jercy",
+  " shoes": "cleats",
+};
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+console.log(hatValue);
+
+//bracket notation
+//if there is space in item name " al head" like that you can usr bracket notations
+var testObj = {
+  "an entree": "humburger",
+  "my side": " veggies",
+  "the drink ": "water",
+};
+var entreeValue = testObj["an entree"];
+var drinkValue = testObj["the drink "];
+console.log(entreeValue);
+console.log(drinkValue);
+
+// variables
+//updating obeject properties
+
+var myDog = {
+  name: "ladu",
+  age: 9,
+  "legs ": "4",
+  friends: ["heri", "tom"],
+};
+myDog.name = "happy camper";
+
+console.log(myDog);
+
+//add properties from object
+var myDog = {
+  name: "ladu",
+  age: 9,
+  "legs ": "4",
+  friends: ["heri", "tom"],
+};
+myDog.name = "happy camper";
+myDog["bark"] = "woof!";
+
+console.log(myDog);
+
+//delete properties from object
+var lastDog = {
+  name: "ladu",
+  " age": 9,
+  "legs ": "4",
+  friends: ["heri", "tom"],
+  "barrn ": "bow-wow",
+};
+lastDog.name = "happy camper";
+delete lastDog["barrn "];
+
+console.log(lastDog);
+
+//  object for lookups
+
+function phoneticlookup(val) {
+  var result = "";
+
+  var lookup = {
+    alpha: "admas",
+    bravo: "Boston",
+    echo: "denver",
+    dtox: "easy",
+  };
+  result = lookup[val];
+  return result;
+}
+console.log(phoneticlookup("echo"));
+// testing object for properties
+var myobj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh",
+};
+function checkObj(checkProp) {
+  if (myobj.hasOwnProperty(checkProp)) {
+    return myobj[checkProp];
+  } else {
+    return "not Found";
+  }
+}
+
+console.log(checkObj("hello"));
+console.log(checkObj("gift"));
+
+// javascript store complex data on it store arrays ,object,strings
+var myMusic = [
+  {
+    artist: "Billy joel",
+    title: "Piano Man",
+    release_year: 1973,
+    formats: ["CD", "8T", "LP"],
+    // gold: ture,
+  },
+  {
+    artist: "Bahra",
+    title: "retya",
+    release_year: 1973,
+    formats: ["ytube", "tiktok"],
+    // gold: ture,
+  },
+];
+console.log(myMusic);
