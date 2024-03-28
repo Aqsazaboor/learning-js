@@ -565,3 +565,85 @@ var myMusic = [
   },
 ];
 console.log(myMusic);
+
+//nested objects
+// in order to access sub-properties of an object you can chain together the dot or bracket notation.
+var myStorage = {
+  car: {
+    inside: {
+      " glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
+};
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents);
+
+//accessing nested arrays
+var myPlants = [
+  {
+    type: "flower",
+    list: ["rose", "tulip", "dandelion"],
+  },
+  {
+    type: "trees",
+    list: ["fir", "pine", "birch"],
+  },
+];
+var secondTree = myPlants[1].list[1];
+var secondTree = myPlants[0].list[1];
+console.log(secondTree);
+
+// while loops
+//while loop that runs while a specified condition is ture and stop once its no longer true
+var myArray = [];
+var i = 0;
+while (i < 5) {
+  myArray.push(i);
+  i++;
+}
+console.log(myArray);
+
+//iterate with for loops
+
+var ourArray = [];
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+console.log(ourArray);
+
+//odd number with a for loop
+var ourArray = [];
+
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+console.log(ourArray);
+
+//count backwords with a for loop
+
+var ourArray = [];
+for (var i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+  console.log(ourArray);
+}
+
+//iterate through an array with a for loop
+var myArr = [2, 3, 4, 5, 6];
+var total = 0;
+
+for (var i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+console.log(total);
+// nesting for loops
+// array inside the array multipul arra
+//do while loop  run at least one time after  check the condiction after its run//
+// random fractionand whole numbers
+function randomFraction() {
+  return Math.random();
+}
+console.log(randomFraction());
